@@ -7,3 +7,5 @@ It contains 2 bash files, which must be executed directly in the directory:
 
 * `build.bash`: will build the docker image
 * `run.bash`: will run a new docker container of the image and start the bash shell in interactive mode
+
+see also this [Stackoverflow answer](http://stackoverflow.com/a/42856201/6287240)
