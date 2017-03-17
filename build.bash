@@ -1,10 +1,8 @@
 #!/bin/bash
-IMAGE_NAME=gitlab_ci
-TAG=8
-IMAGE_TAG=$IMAGE_NAME:$TAG
+IMAGE_NAME=docker-android
+IMAGE_TAG=$IMAGE_NAME
 
 docker build \
   -t $IMAGE_TAG \
-  ../gitlab_ci
+  ../docker-android
 
-docker tag $IMAGE_TAG $IMAGE_NAME:latest

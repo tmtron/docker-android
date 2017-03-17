@@ -1,6 +1,6 @@
 #!/bin/bash
-IMAGE_NAME=gitlab_ci
+IMAGE_NAME=docker-android
 
-docker run -i -t  \
+docker run -i -t --rm \
   $IMAGE_NAME \
   /bin/bash

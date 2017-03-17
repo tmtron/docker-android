@@ -14,6 +14,7 @@ ARG CONSTRAINT_LAYOUT_VERSION="1.0.2"
 # android-sdk/tools/bin/sdkmanager --verbose --list
 RUN apt-get update \
  && apt-get install -y wget \
+ && apt-get install -y openjdk-7-jdk \
  && wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/tools_r${ANDROID_SDK_TOOLS}-linux.zip \
  && unzip android-sdk.zip -d android-sdk \
  && echo y | android-sdk/tools/bin/sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" \
@@ -26,3 +27,4 @@ RUN apt-get update \
  && echo y | android-sdk/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;${CONSTRAINT_LAYOUT_VERSION}" \
  && rm -rf /tmp/* 
 
+ENV JAVA7_HOME /usr/lib/jvm/java-7-openjdk-amd64
